@@ -4,12 +4,16 @@ let tempo = 0;
 let intervalo;
 let intervaloTempo;
 
-function respirador(x, y, z, q, tempoTotal){
-    this.x = x;
-    this.y = y;
-    this.z = z;
-    this.q = q;
-    this.tempoTotal = tempoTotal;
+
+
+function respirador(){
+
+    let tempoTotal = +document.getElementById("tempoTotal").value * 1000;
+    let tempoRespira = +document.getElementById("tempoRespira").value * 1000;
+    let tempoPrenda = +document.getElementById("tempoPrenda").value * 1000;
+    let tempoSolte = +document.getElementById("tempoSolte").value * 1000;
+    let tempoAguarde = +document.getElementById("tempoAguarde").value * 1000;
+    
 
     intervalo = setInterval( ()=>{
         tempo++
@@ -32,7 +36,7 @@ function respirador(x, y, z, q, tempoTotal){
             {background: '#DAF3FF', height: 0, offset:0},
             {background: '#5D99AE', height: '100%', offset:1}
         ], {
-            duration: x,
+            duration: tempoRespira,
             iterations: 1,
             direction: 'alternate'
         })
@@ -40,7 +44,7 @@ function respirador(x, y, z, q, tempoTotal){
         intervaloTempo = setTimeout(()=>{
             tempo2()
             
-        }, x)
+        }, tempoRespira)
     }
 
     function tempo2(){
@@ -50,7 +54,7 @@ function respirador(x, y, z, q, tempoTotal){
             {background: '#5D99AE', height: '100%', offset:0},
             {background: '#DAF3FF', height: '100%', offset:1}
         ], {
-            duration: y,
+            duration: tempoPrenda,
             iterations: 1,
             direction: 'alternate'
         })
@@ -58,7 +62,7 @@ function respirador(x, y, z, q, tempoTotal){
         intervaloTempo = setTimeout(()=>{
             
             tempo3()
-        }, y)
+        }, tempoPrenda)
     }
 
     function tempo3(){
@@ -68,14 +72,14 @@ function respirador(x, y, z, q, tempoTotal){
             {background: '#DAF3FF', height: '100%', offset:0},
             {background: '#5D99AE', height: 0, offset:1}
         ], {
-            duration: x,
+            duration: tempoSolte,
             iterations: 1,
             direction: 'alternate'
         })
         intervaloTempo = setTimeout(()=>{
             
             tempo4()
-        }, z)
+        }, tempoSolte)
     }
 
     function tempo4(){
@@ -85,7 +89,7 @@ function respirador(x, y, z, q, tempoTotal){
             {background: '#5D99AE', height: 0, offset:0},
             {background: '#DAF3FF', height: 0, offset:1}
         ], {
-            duration: x,
+            duration: tempoAguarde,
             iterations: 1,
             direction: 'alternate'
         })
@@ -93,15 +97,15 @@ function respirador(x, y, z, q, tempoTotal){
         intervaloTempo = setTimeout(()=>{
             
             tempo1()
-        }, q)
+        }, tempoAguarde)
     }
 }
 
 
+function fecharPreAjuste(){
+    let inicioFecha = document.getElementById("inicio")
+    inicioFecha.style.display = 'none';
 
-
-
-
-
-
-
+    let inicio = document.getElementById("principal")
+    inicio.style.display = 'inline-block'; 
+}
