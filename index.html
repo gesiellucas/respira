@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,4 +68,76 @@
     <p id="demo"></p>
     <script src="index.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    
+    <section id="inicio">
+        
+        
+        <div id="apresentacao">
+            <h1>RESPIRE CONSCIENTE!</h1>
+            <p>Escolha um lugar tranquilo e silencioso para começar sua sessão!</p>
+        </div>
+
+        <div class="preajuste">
+
+            <select name="estiloRespiracao" id="estiloRespiracao">
+                <option value="1">Precisando relaxar?</option>
+                <option value="2">Precisando dormir?</option>
+                <option value="3">Regular respiração!</option>
+                <option value="4">Energize seu corpo</option>
+            </select>
+
+            <div class="input-group">
+                <input type="radio" name="tempo-inicial" id="ttempo3">
+                <label for="ttempo3">3 min</label>
+
+                <input type="radio" name="tempo-inicial" id="ttempo5">
+                <label for="ttempo5">5 min</label>
+
+                <input type="radio" name="tempo-inicial" id="ttempo10">
+                <label for="ttempo10">10 min</label>
+            </div>
+
+            <a href="#" onclick="fecharPreAjuste()">COMEÇAR
+
+                <svg>
+                    <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+                </svg>
+                
+            </a>
+        </div>
+
+    </section>
+    <section id="principal">
+        <div id="pulmao">
+            <div id="ar" class="enche"></div>
+        </div>
+        <input type="number" placeholder="Tempo Total" id="tempoTotal" /><br>
+        <input type="number" placeholder="Respira" id="tempoRespira" /><br>
+        <input type="number" placeholder="Prenda" id="tempoPrenda" /><br>
+        <input type="number" placeholder="Solte" id="tempoSolte" /><br>
+        <input type="number" placeholder="Aguarde"  id="tempoAguarde" /><br>
+        <button onclick="respirador()">Respirador</button>
+    </section>
+
+    
+
+
+    
+    <p id="demo"></p>
+    <script src="index.js"></script>
+</body>
+>>>>>>> c686a8157fa3423aa830e38bc92bfc5cf1ee84e6
 </html>

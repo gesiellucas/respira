@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            text-align: center;
+            width: 200px;
+            
+        }
+        
+        .btn-1 {
+            background: red;
+            font-weight: 100;
+        }
+        .btn-1 svg {
+            height: 45px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 200px;
+        }
+        .btn-1 rect {
+            fill: none;
+            stroke:black;
+            stroke-width: 5;
+            stroke-dasharray: 422, 0;
+            transition: all 0.35s linear;
+        }
+        
+        .btn-1:hover rect {
+            stroke-width: 5;
+            stroke-dasharray: 15, 310;
+            stroke-dashoffset: 48;
+            transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+ 
+    </style>
+</head>
+<body>
+    <div class="buttons">
+    <a href="https://twitter.com/Dave_Conner" class="btn btn-1">
+        <svg>
+          <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+        </svg>
+       Hover
+      </a>
+    </div>
+</body>
+</html>
