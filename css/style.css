@@ -1,4 +1,6 @@
-
+bodY{
+    position: relative;
+}
 #pulmao{
     width:70px;
     height:200px;
@@ -62,4 +64,15 @@ div.input-group input[name*="tempo-inicial"]:checked + label[for*="ttempo"] {
 #temporizador input:checked + label{
     transition:2s all;
     text-decoration: underline;
+}
+
+/* Configurações  */
+#config{
+    width:250px;
+    height: 600px;
+    background: green;
+    position: absolute;
+    top:0;
+    right:0;
+
 }
